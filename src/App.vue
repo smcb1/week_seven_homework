@@ -4,7 +4,6 @@
     <div class="main-container">
       <films-list :films="films"></films-list>
       <locations-list :locations="locations"></locations-list>
-      <!-- <film-detail :film="selectedFilm"></film-detail> -->
     </div>
   </div>
 </template>
@@ -45,7 +44,7 @@ body {
 }
 h1 {
   font-family: 'Noto Sans KR', sans-serif;
-  background-color: rgba(0, 132, 180, 0.3);
+  background-color: rgba(0, 102, 180, 0.4);
   color: #333;
   padding: 15px;
 }

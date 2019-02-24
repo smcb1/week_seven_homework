@@ -4,7 +4,7 @@
     <div class="item" v-for="location in locations"
     v-bind:location="location"
     v-bind:id="location.id">
-    <h2><a v-bind:href="location.url">{{ location.name }}</a></h2>
+    <h2>{{ location.name }}</h2>
     <p>Terrain: {{ location.terrain }}</p>
     <p>Climate: {{ location.climate }}</p>
     <p>Surface Water: {{ location.surface_water }}</p>
@@ -36,7 +36,6 @@ export default {
     .then(res => res.json())
     .then(locations => {
       this.locations = locations
-      // this.selectedLocation = this.locations[0]
     }),
     eventBus.$on('selected-location', (location) => {
       this.selectedLocation = location;
@@ -55,7 +54,7 @@ export default {
 }
 .item:nth-child(even){
   border: 1px dotted;
-  background-color: rgba(0, 122, 160, 0.8);
+  background-color: rgba(0, 102, 180, 0.8);
   color: #eee;
   padding-left: 15px;
   margin: 5px;
@@ -63,7 +62,7 @@ export default {
 
 .item:nth-child(odd){
   border: 1px dotted;
-  background-color: rgba(0, 122, 160, 0.6);
+  background-color: rgba(0, 102, 180, 0.6);
   color: #fff;
   padding-left: 15px;
   margin: 5px;

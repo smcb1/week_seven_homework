@@ -4,7 +4,7 @@ import VueSweetalert2 from 'vue-sweetalert2';
 
 export const eventBus = new Vue();
 
-Vue.component('job', {
+Vue.component('describe', {
   template: '<button class="btn" @click="test">Read more</button>',
   methods: {
     test() {

@@ -8,8 +8,7 @@
       <p>Director: {{ film.director }}</p>
       <p>Release: {{film.release_date}}</p>
       <!-- <p>{{ film.description }}</p> -->
-      <!-- <p>{{film.url}}</p> -->
-      <job>{{film.id}}</job>
+      <describe></describe>
     </div>
   </div>
 
@@ -34,9 +33,6 @@ export default {
     },
     search(query) {
       this.searchQuery = query
-    },
-    filmSelect() {
-      this.$swal('{{this.film}}')
     }
   },
   mounted() {
@@ -44,7 +40,6 @@ export default {
     .then(res => res.json())
     .then(films => {
       this.films = films
-      // this.selectedFilm = this.films[0]
     }),
     eventBus.$on('selected-film', (film) => {
       this.selectedFilm = film;
@@ -63,7 +58,7 @@ export default {
 }
 .item:nth-child(even){
   border: 1px dotted;
-  background-color: rgba(0, 132, 180, 0.8);
+  background-color: rgba(0, 102, 180, 0.8);
   color: #eee;
   padding-left: 15px;
   margin: 5px;
@@ -71,7 +66,7 @@ export default {
 
 .item:nth-child(odd){
   border: 1px dotted;
-  background-color: rgba(0, 132, 180, 0.6);
+  background-color: rgba(0, 102, 180, 0.6);
   color: #fff;
   padding-left: 15px;
   margin: 5px;
@@ -85,9 +80,7 @@ export default {
   vertical-align: top;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-  /* background-color: #42b983; */
   cursor: pointer;
-  /* color: #fff; */
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
