@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <h1>GHIBLI</h1>
+    <h1>GHIBLI STUDIO API</h1>
     <div class="main-container">
       <films-list :films="films"></films-list>
       <locations-list :locations="locations"></locations-list>
@@ -29,7 +29,7 @@ export default {
     'films-list': FilmsList,
     // 'film-detail': FilmDetail,
     'locations-list': LocationsList
-  }
+  },
 }
 </script>
 

@@ -8,7 +8,7 @@ Vue.component('describe', {
   template: '<button class="btn" @click="test">Read more</button>',
   methods: {
     test() {
-      this.$swal(('this.film.id'), 'film.description', "Producer:")
+      this.$swal(`this.film.title`, 'description', 'producer')
     }
   }
 });

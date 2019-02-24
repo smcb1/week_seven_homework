@@ -5,13 +5,11 @@
     v-bind:film="film"
     v-bind:id="film.id">
       <h2>{{ film.title }}</h2>
-      <p>Director: {{ film.director }}</p>
-      <p>Release: {{film.release_date}}</p>
+      <p>Director: {{ film.director }} ({{ film.release_date }})</p>
       <!-- <p>{{ film.description }}</p> -->
       <describe></describe>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -30,9 +28,6 @@ export default {
   methods: {
     handleChange() {
       eventBus.$emit('selected-film', this.films[this.selectedFilmIndex])
-    },
-    search(query) {
-      this.searchQuery = query
     }
   },
   mounted() {
@@ -61,6 +56,7 @@ export default {
   background-color: rgba(0, 102, 180, 0.8);
   color: #eee;
   padding-left: 15px;
+  padding-bottom: 10px;
   margin: 5px;
 }
 
