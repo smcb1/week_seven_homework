@@ -1,5 +1,5 @@
 <template lang="html">
-  <option v-on:change="handleChange">{{ film.title }}</option>
+  <option v-on:change="handleClick">{{ film.title }}</option>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
   name: 'list-component',
   props: ['film'],
   methods: {
-    handleChange(){
+    handleClick(){
       eventBus.$emit('selected-film', this.film);
     }
   }

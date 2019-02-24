@@ -1,9 +1,10 @@
 <template lang="html">
   <div>
-    <h1>GHIBLI Movies</h1>
+    <h1>GHIBLI</h1>
     <div class="main-container">
       <films-list :films="films"></films-list>
-      <film-detail :film="selectedFilm"></film-detail>
+      <locations-list :locations="locations"></locations-list>
+      <!-- <film-detail :film="selectedFilm"></film-detail> -->
     </div>
   </div>
 </template>
@@ -11,6 +12,7 @@
 <script>
 import FilmsList from "../components/FilmsList.vue";
 import FilmDetail from "../components/FilmDetail.vue";
+import LocationsList from "../components/LocationsList.vue";
 import {eventBus} from './main.js'
 
 export default {
@@ -18,34 +20,31 @@ export default {
   data() {
     return {
       films: [],
+      locations: [],
       selectedFilm: 0,
-      selectedFilmIndex: 0
+      selectedFilmIndex: 0,
+      selectedLocation: 0
     }
   },
   components: {
     'films-list': FilmsList,
-    'film-detail': FilmDetail
-  },
-  mounted() {
-    fetch('https://ghibliapi.herokuapp.com/films')
-    .then(res => res.json())
-    .then(films => {
-      this.films = films
-      this.selectedFilm = this.films[0]
-    }),
-    eventBus.$on('selected-film', (film) => {
-      this.selectedFilm = film;
-    })
+    // 'film-detail': FilmDetail,
+    'locations-list': LocationsList
   }
 }
 </script>
 
 <style lang="css" scoped>
-
 #app {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #444;
+}
+h1 {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: rgba(0, 132, 180, 0.9);
+  color: #eee;
+  padding: 15px;
 }
 </style>
