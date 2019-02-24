@@ -35,16 +35,18 @@ export default {
 </script>
 
 <style lang="css" scoped>
+body {
+  background-color: #555;
+}
 #app {
   font-family: 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #444;
 }
 h1 {
   font-family: 'Noto Sans KR', sans-serif;
-  background-color: rgba(0, 132, 180, 0.9);
-  color: #eee;
+  background-color: rgba(0, 132, 180, 0.3);
+  color: #333;
   padding: 15px;
 }
 </style>

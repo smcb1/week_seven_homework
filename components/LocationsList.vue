@@ -8,8 +8,6 @@
     <p>Terrain: {{ location.terrain }}</p>
     <p>Climate: {{ location.climate }}</p>
     <p>Surface Water: {{ location.surface_water }}</p>
-    <p>Films: {{ location.films[0] }}</p>
-
   </div>
 </div>
 
@@ -53,12 +51,21 @@ export default {
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, 400px);
   font-family: 'Noto Sans KR', sans-serif;
+  margin: 10px;
 }
-.item{
+.item:nth-child(even){
   border: 1px dotted;
-  background-color: rgba(0, 132, 180, 0.8);
+  background-color: rgba(0, 122, 160, 0.8);
   color: #eee;
-  padding-left: 5px;
+  padding-left: 15px;
+  margin: 5px;
+}
+
+.item:nth-child(odd){
+  border: 1px dotted;
+  background-color: rgba(0, 122, 160, 0.6);
+  color: #fff;
+  padding-left: 15px;
   margin: 5px;
 }
 
