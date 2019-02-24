@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <h1>GHIBLI API</h1>
+    <h1>GHIBLI Movies</h1>
     <div class="main-container">
       <films-list :films="films"></films-list>
       <film-detail :film="selectedFilm"></film-detail>
@@ -42,24 +42,10 @@ export default {
 
 <style lang="css" scoped>
 
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 #app {
   font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #444;
-  margin-top: 60px;
-  margin-left: 60px;
-}
-
-h1 {
-  color: #333;
 }
 </style>
