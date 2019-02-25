@@ -44,8 +44,8 @@ body {
 }
 h1 {
   font-family: 'Noto Sans KR', sans-serif;
-  background-color: rgba(0, 102, 180, 0.4);
-  color: #333;
+  background-color: rgba(30, 87, 153, 0.9);
+  color: #eee;
   padding: 15px;
 }
 </style>
